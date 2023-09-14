@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,11 +10,12 @@ public abstract class Entity : MonoBehaviour
     [SerializeField]
     protected int _health;
     [SerializeField]
-    private int _resistance;
+    private int _minimumImpact = 5;
+    [SerializeField]
+    private float _impactDamageReceived = 1;
 
     public void TakeDamage(int damage)
     {
-        damage -= _resistance;
         if(damage > 0)
         {
             Debug.Log($"Take {damage} Damages");
@@ -31,7 +33,7 @@ public abstract class Entity : MonoBehaviour
         Rigidbody2D selfRB = collision.otherRigidbody;
         Rigidbody2D otherRB = collision.rigidbody;
 
-        Vector3 selfForce = selfRB.velocity * selfRB.mass;
+        Vector3 selfForce = selfRB.velocity;
         Vector3 otherForce = Vector3.zero;
         if(otherRB)
         {
@@ -39,13 +41,21 @@ public abstract class Entity : MonoBehaviour
         }
 
         float impact = (otherForce - selfForce).magnitude;
-        if(impact > 5)
+        if(impact > _minimumImpact)
         {
             //Debug.Log($"{this.name} > {collision.collider.gameObject.name} : S.{selfForce} O.{otherForce} : I.{impact}");
-            TakeDamage(Mathf.RoundToInt(impact));
+            TakeDamage(Mathf.RoundToInt(impact * _impactDamageReceived));
         }
     }
 
     public abstract void OnTakeDamage();
     public abstract void OnDeath();
+
+    public void KnockBack(Vector3 force)
+    {
+        if(TryGetComponent(out Rigidbody2D rb))
+        {
+            rb.AddForce(force, ForceMode2D.Impulse);
+        }
+    }
 }

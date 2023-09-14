@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 855906231243615173}
   - component: {fileID: 4606233314610647584}
   - component: {fileID: 5624149743463535934}
+  - component: {fileID: -7105830864445014511}
   m_Layer: 8
   m_Name: Physic Background
   m_TagString: Untagged
@@ -157,3 +158,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7105830864445014511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164364970995891185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389a38c79317a74c89c8eb254a720b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 30
+  _health: 30
+  _minimumImpact: 5
+  _impactDamageReceived: 1
+  IgnoreGravity: 0
+  GravityWhenHit: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6672785001675902645}
   - component: {fileID: 359175155869455841}
   - component: {fileID: 5745740557603812747}
+  - component: {fileID: 4320238362583175940}
   m_Layer: 6
   m_Name: Physic Climb
   m_TagString: Untagged
@@ -157,3 +158,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4320238362583175940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967750119190488323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389a38c79317a74c89c8eb254a720b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 30
+  _health: 30
+  _minimumImpact: 5
+  _impactDamageReceived: 1
+  IgnoreGravity: 0
+  GravityWhenHit: 0
