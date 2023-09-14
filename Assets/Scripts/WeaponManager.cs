@@ -39,6 +39,8 @@ public class WeaponManager : MonoBehaviour
         }
         if(_charge >= 0 )
         {
+            _charge = Mathf.Min(_charge + Time.deltaTime * ChargeSpeed, 1);
+
             Vector3 mousePosition = Vector3.zero;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (_mousePlane.Raycast(ray, out float distance))

@@ -124,7 +124,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5506351852359120634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59eefb80463b24ea7dde77ae7c525b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Collider: {fileID: 2473277132546512296}
 --- !u!1 &6450064444217904061
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9b92c50d707674193fba6291f67351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 15
+  _knockBack: 20
   HitCollider: {fileID: 5888891112889321870}
+  AttackFrames: 10
 --- !u!1 &8860202071118765480
 GameObject:
   m_ObjectHideFlags: 0

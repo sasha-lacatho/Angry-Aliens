@@ -6,7 +6,9 @@ using UnityEngine.Events;
 
 public class Character : Entity
 {
+    [Range(0, 3)]
     public int Id;
+    [Range(0, 1)]
     public int TeamId;
 
     public static Character Current;

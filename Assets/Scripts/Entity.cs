@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,4 +50,13 @@ public abstract class Entity : MonoBehaviour
 
     public abstract void OnTakeDamage();
     public abstract void OnDeath();
+
+    public void KnockBack(Vector3 force)
+    {
+        Debug.Log(force.magnitude);
+        if(TryGetComponent(out Rigidbody2D rb))
+        {
+            rb.AddForce(force, ForceMode2D.Impulse);
+        }
+    }
 }
