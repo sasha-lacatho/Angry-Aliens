@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeleeWeapon : Weapon
 {
     public TriggerListener HitCollider;
+    public LineRenderer LineRenderer;
     public int AttackFrames;
     private int _attackFrames;
     public override void Attack(Vector3 target, float charge)
@@ -45,5 +46,7 @@ public class MeleeWeapon : Weapon
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         transform.localPosition = direction.normalized;
+
+        LineRenderer.SetPositions(new Vector3[] { _character.transform.position, (direction.normalized * _knockBack * charge) + (Vector2)_character.transform.position });
     }
 }
