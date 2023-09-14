@@ -6,6 +6,11 @@ using UnityEngine.Events;
 
 public class Character : Entity
 {
+    public int Id;
+    public int TeamId;
+
+    public static Character Current;
+
     private CharacterMovement _currentController;
     [SerializeField]
     private CharacterMovement _defaultController;
@@ -23,6 +28,13 @@ public class Character : Entity
     {
         return _currentController ? _currentController : _defaultController;
     }
+
+    private void Awake()
+    {
+        Debug.LogWarning("Remove this when integrating turn system");
+        Current = this;
+    }
+
 
     public override void OnDeath()
     {
