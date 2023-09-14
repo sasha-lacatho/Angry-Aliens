@@ -9,4 +9,8 @@ public class Structure : Entity
         Destroy(gameObject);
         Debug.Log("Structure destroyed");
     }
+
+    public override void OnTakeDamage()
+    {
+    }
 }
