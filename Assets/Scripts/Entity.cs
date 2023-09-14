@@ -53,7 +53,6 @@ public abstract class Entity : MonoBehaviour
 
     public void KnockBack(Vector3 force)
     {
-        Debug.Log(force.magnitude);
         if(TryGetComponent(out Rigidbody2D rb))
         {
             rb.AddForce(force, ForceMode2D.Impulse);

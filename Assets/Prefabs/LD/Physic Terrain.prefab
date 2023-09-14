@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1482062211036996176}
   - component: {fileID: 6205299563461862409}
   - component: {fileID: 5544437552336676487}
+  - component: {fileID: 6848570677345982627}
   m_Layer: 3
   m_Name: Physic Terrain
   m_TagString: Untagged
@@ -157,3 +158,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6848570677345982627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965022478424170827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6389a38c79317a74c89c8eb254a720b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 30
+  _health: 30
+  _minimumImpact: 5
+  _impactDamageReceived: 1
+  IgnoreGravity: 0
+  GravityWhenHit: 0
