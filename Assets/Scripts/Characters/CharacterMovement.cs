@@ -67,7 +67,7 @@ public class CharacterMovement : MonoBehaviour
     }
     private void ClimbTest()
     {
-        _canClimb = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), Vector3.down, 0.5f, LayerUtility.ClimbMask);
+        _canClimb = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), Vector3.down, 1f, LayerUtility.ClimbMask);
 
         _rb.gravityScale = (!_grounded & _canClimb) ? 0 : 1;
     }

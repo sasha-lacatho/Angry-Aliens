@@ -1,14 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character : Entity
 {
-
-    public int Health;
-
-    private int _maxHealth;
-
     private CharacterMovement _currentController;
     [SerializeField]
     private CharacterMovement _defaultController;
@@ -17,5 +13,11 @@ public class Character : MonoBehaviour
     public CharacterMovement GetController()
     {
         return _currentController ? _currentController : _defaultController;
+    }
+
+    public override void OnDeath()
+    {
+        Destroy(gameObject);
+        Debug.Log("OnDeath");
     }
 }
