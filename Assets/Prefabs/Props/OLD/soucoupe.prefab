@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2289322738441596819}
   - component: {fileID: -895278220113008519}
   m_Layer: 3
-  m_Name: soucoupe
+  m_Name: Soucoupe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6389a38c79317a74c89c8eb254a720b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _health: 100
+  _maxHealth: 150
+  _health: 150
   _minimumImpact: 5
   _impactDamageReceived: 1
-  IgnoreGravity: 0
-  GravityWhenHit: 0
+  IgnoreGravity: 1
+  GravityWhenHit: 1
