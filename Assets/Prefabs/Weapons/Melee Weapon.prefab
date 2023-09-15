@@ -240,8 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9b92c50d707674193fba6291f67351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
-  _knockBack: 20
+  Damage: 15
+  KnockBack: 15
+  Charge: 0
   OnStartCharge:
     m_PersistentCalls:
       m_Calls: []

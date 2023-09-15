@@ -13,12 +13,11 @@ public class WeaponManager : MonoBehaviour
 
     private Plane _mousePlane = new Plane(Vector3.back, 0);
 
-    private float _charge = -1;
+    private float Charge = -1;
 
     private void Start()
     {
         _currentWeapon = GameObject.Instantiate(Weapons[_currentIndex].gameObject).GetComponent<Weapon>();
-        _currentWeapon.AttachTo(Character.Current);
     }
 
     private void Update()
@@ -33,43 +32,44 @@ public class WeaponManager : MonoBehaviour
 
         if (Input.mouseScrollDelta.y != 0)
         {
-            Debug.Log(Input.mouseScrollDelta);
             ScrollWeapon(Mathf.RoundToInt(Input.mouseScrollDelta.y));
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            _charge = -1;
+            Charge = -1;
             _currentWeapon.gameObject.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            _charge = Time.deltaTime * ChargeSpeed;
+            Charge = Time.deltaTime * ChargeSpeed;
             _currentWeapon.gameObject.SetActive(true);
         }
-        _currentWeapon.Preview(mousePosition, _charge > 0 ? _charge : 0);
-        if (_charge >= 0 )
+        _currentWeapon.Preview(mousePosition, Charge > 0 ? Charge : 0);
+        if (Charge >= 0 )
         {
-            _charge = Mathf.Min(_charge + Time.deltaTime * ChargeSpeed, 1);
+            Charge = Mathf.Min(Charge + Time.deltaTime * ChargeSpeed, 1);
 
 
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                _currentWeapon.Attack(mousePosition, _charge);
-                _charge = -1;
+                _currentWeapon.Attack(mousePosition, Charge);
+                Charge = -1;
             }
         }
     }
 
     public void ScrollWeapon(int scroll)
     {
+        Debug.Log(scroll);
+        Debug.Log(_currentIndex);
+
         Destroy(_currentWeapon.gameObject);
-        _currentIndex = Mathf.Max((_currentIndex + scroll) % Weapons.Count, 0);
+        _currentIndex = Mathf.Max((Weapons.Count + _currentIndex + scroll) % Weapons.Count, 0);
 
         _currentWeapon = GameObject.Instantiate(Weapons[_currentIndex].gameObject).GetComponent<Weapon>();
         Debug.Log(_currentWeapon.name);
-        _currentWeapon.AttachTo(Character.Current);
     }
 
 }
