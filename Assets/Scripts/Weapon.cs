@@ -2,33 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.TextCore.Text;
 
 public abstract class Weapon : MonoBehaviour
 {
-    [SerializeField]
-    protected int _damage;
-    [SerializeField]
-    protected int _knockBack;
-
-    protected Character _character;
+    public int Damage;
+    public int KnockBack;
 
     protected Vector3 _target;
-    protected float _charge;
+    [HideInInspector]
+    public float Charge;
 
     [Header("Events")]
     public UnityEvent OnStartCharge;
     public UnityEvent OnAttack;
-
-    public void AttachTo(Character character)
+    private void Update()
     {
-        transform.SetParent(character.transform);
-        transform.localPosition = Vector3.zero;
-        _character = character;
+        transform.SetParent(Character.Current?.transform);
     }
+
     public abstract void Preview(Vector3 target, float charge);
     public virtual void Attack(Vector3 target, float charge)
     {
         _target = target;
-        _charge = charge;
+        Charge = charge;
     }
 }

@@ -31,22 +31,22 @@ public class MeleeWeapon : Weapon
     {
         Debug.Log(hit.name);
 
-        if(hit.TryGetComponent(out Entity entity) && entity != _character)
+        if(hit.TryGetComponent(out Entity entity) && entity != Character.Current)
         {
-            entity.TakeDamage(_damage);
-            entity.KnockBack((_target - _character.transform.position).normalized * _knockBack * _charge);
+            entity.TakeDamage(Damage);
+            entity.KnockBack((_target - Character.Current.transform.position).normalized * KnockBack * Charge);
         }
     }
 
     public override void Preview(Vector3 target, float charge)
     {
-        Vector2 direction = target - _character.transform.position;
+        Vector2 direction = target - Character.Current.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         transform.localPosition = direction.normalized;
 
-        LineRenderer.SetPositions(new Vector3[] { _character.transform.position, (direction.normalized * _knockBack * charge) + (Vector2)_character.transform.position });
+        LineRenderer.SetPositions(new Vector3[] { Character.Current.transform.position, (direction.normalized * KnockBack * charge) + (Vector2)Character.Current?.transform.position });
     }
 }
