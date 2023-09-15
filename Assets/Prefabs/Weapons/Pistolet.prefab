@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
         type: 3}
@@ -63,11 +63,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7601226680800833775, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d0c82b197ef1854db2b88e317a88b19, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a529c897fc5cd469fe0ca41c958aff, type: 2}
+    - target: {fileID: -1439730007547781893, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a529c897fc5cd469fe0ca41c958aff, type: 2}
+    - target: {fileID: -678588488315902003, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a529c897fc5cd469fe0ca41c958aff, type: 2}
     - target: {fileID: 919132149155446097, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
         type: 3}
       propertyPath: m_Name
       value: Pistolet
       objectReference: {fileID: 0}
+    - target: {fileID: 4746563966170989557, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d0c82b197ef1854db2b88e317a88b19, type: 2}
+    - target: {fileID: 7071182760956848314, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50ad6b46dc60a11478fbf925117c150b, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 81ba32ade09a35a43bfaa48fd7fd7232,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50ad6b46dc60a11478fbf925117c150b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -99,8 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69591310c5ee1943bbbe134ef19a2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
-  _knockBack: 15
+  Damage: 0
+  KnockBack: 0
+  Charge: 0
   OnStartCharge:
     m_PersistentCalls:
       m_Calls: []

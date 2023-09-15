@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 68eff59344cf35846b5efe1135d62bf2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 68eff59344cf35846b5efe1135d62bf2,
         type: 3}
@@ -63,11 +63,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3056041028626425089, guid: 68eff59344cf35846b5efe1135d62bf2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 50ad6b46dc60a11478fbf925117c150b, type: 2}
     - target: {fileID: 919132149155446097, guid: 68eff59344cf35846b5efe1135d62bf2,
         type: 3}
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
+    - target: {fileID: 4028443047550754314, guid: 68eff59344cf35846b5efe1135d62bf2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a529c897fc5cd469fe0ca41c958aff, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -99,8 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9b92c50d707674193fba6291f67351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
-  _knockBack: 20
+  Damage: 0
+  KnockBack: 0
+  Charge: 0
   OnStartCharge:
     m_PersistentCalls:
       m_Calls: []
@@ -133,7 +144,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a9d0e28513cbd94695a4eda9f2236b4, type: 2}
+  - {fileID: 2100000, guid: 50ad6b46dc60a11478fbf925117c150b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
