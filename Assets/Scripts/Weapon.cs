@@ -16,10 +16,7 @@ public abstract class Weapon : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnStartCharge;
     public UnityEvent OnAttack;
-    private void Update()
-    {
-        transform.SetParent(Character.Current?.transform);
-    }
+
 
     public abstract void Preview(Vector3 target, float charge);
     public virtual void Attack(Vector3 target, float charge)

@@ -30,12 +30,12 @@ public class Character : Entity
     {
         return _currentController ? _currentController : _defaultController;
     }
-
+    /*
     private void Awake()
     {
         Debug.LogWarning("Remove this when integrating turn system");
         Current = this;
-    }
+    }*/
 
 
     public override void OnDeath()

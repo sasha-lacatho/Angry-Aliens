@@ -35,7 +35,7 @@ public class ShootWeapon : Weapon
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        transform.localPosition = direction.normalized;
+        transform.position = Character.Current.transform.position + (Vector3)direction.normalized;
 
         LineRenderer.SetPositions(new Vector3[] { Character.Current.transform.position, (direction.normalized * KnockBack * charge) + (Vector2)Character.Current?.transform.position });
     }

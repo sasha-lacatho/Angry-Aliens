@@ -24,7 +24,7 @@ public class GrenadeWeapon : Weapon
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.localPosition = direction;
+        transform.position = Character.Current.transform.position + (Vector3)direction.normalized;
 
         Vector3 start = transform.position;
         Vector3 velocity = ThrowForce * charge * direction;
