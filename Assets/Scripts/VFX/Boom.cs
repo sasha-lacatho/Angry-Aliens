@@ -6,7 +6,6 @@ using UnityEngine.VFX;
 public class Boom : MonoBehaviour
 {
 
-    [SerializeField] private CameraController cameraController;
     [SerializeField] public VisualEffect Particule;
     
     private void Awake()
@@ -14,9 +13,13 @@ public class Boom : MonoBehaviour
         Particule.Stop();
     }
 
-    private void StartEplosion()
+    private void Start()
     {
         Particule.Play();
-        cameraController.StartExplosion();
+
+        if (Camera.main.TryGetComponent(out CameraController camController))
+        {
+            camController.StartExplosion();
+        }
     }
 }
