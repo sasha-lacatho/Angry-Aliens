@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2289322738441596819}
   - component: {fileID: -895278220113008519}
   m_Layer: 3
-  m_Name: BoucheIncendie
+  m_Name: Voiture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944709032810996450}
-  m_Mesh: {fileID: 3909233067320746374, guid: 2f19714c1e7e385488d31982d77ad0a4, type: 3}
+  m_Mesh: {fileID: 3998443429825257798, guid: f7e1f7c56cabe124a8b7a7c943e2fd10, type: 3}
 --- !u!23 &-1247796123315697465
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 02d0799479886cd46bcb75a2cca6f74d, type: 3}
+  - {fileID: -1910860673104795630, guid: 5bcfa0d6c6002e348a70866c9857a077, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6389a38c79317a74c89c8eb254a720b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 75
-  _health: 75
+  _maxHealth: 35
+  _health: 35
   _minimumImpact: 5
   _impactDamageReceived: 1
   IgnoreGravity: 1
