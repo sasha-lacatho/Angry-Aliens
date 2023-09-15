@@ -11,22 +11,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.3197715
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.00000023841858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -7.7853966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
@@ -63,11 +63,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6019625593696984287, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
+    - target: {fileID: -5607114526269462022, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e68bd1ecfdd2e6547989867fa4f43cf2, type: 2}
+    - target: {fileID: -5530070064839707376, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4ae875892f59054f84685cd97a6c6c4, type: 2}
+    - target: {fileID: -572973475515949012, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
+    - target: {fileID: 17330062676665839, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
+    - target: {fileID: 193977079204167597, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
     - target: {fileID: 919132149155446097, guid: 117e9d08602dc464aa18b4472c5b9a0b,
         type: 3}
       propertyPath: m_Name
       value: Martien
       objectReference: {fileID: 0}
+    - target: {fileID: 1646733720424155422, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4ae875892f59054f84685cd97a6c6c4, type: 2}
+    - target: {fileID: 2933703117363191086, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
+    - target: {fileID: 4016042520941070153, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
+    - target: {fileID: 7442322899528439439, guid: 117e9d08602dc464aa18b4472c5b9a0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c219accb6c301d479cbd699a97cb731, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -127,8 +177,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.51354647, y: 0.43703163}
+  m_Size: {x: 0.9102211, y: 1.9641521}
   m_Direction: 0
 --- !u!50 &5588057865804688067
 Rigidbody2D:
@@ -175,8 +225,7 @@ MonoBehaviour:
   _impactDamageReceived: 1
   Id: 0
   TeamId: 0
-  _defaultController: {fileID: 6643172953092474229, guid: 18e1826cf5456b34e9e14b582a8df141,
-    type: 3}
+  _defaultController: {fileID: -1613043524113129011}
   _healthBar: {fileID: 92979992974593119, guid: 18e1826cf5456b34e9e14b582a8df141,
     type: 3}
   OnBeginWalkEvent:

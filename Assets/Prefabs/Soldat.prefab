@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 211f6ae70c6f79f44ad5fceaec30d9dd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 211f6ae70c6f79f44ad5fceaec30d9dd,
         type: 3}
@@ -127,8 +127,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: 0.9892588}
+  m_Size: {x: 1, y: 1.9897465}
   m_Direction: 0
 --- !u!50 &-6165910353091975087
 Rigidbody2D:
@@ -175,8 +175,7 @@ MonoBehaviour:
   _impactDamageReceived: 1
   Id: 0
   TeamId: 0
-  _defaultController: {fileID: 6643172953092474229, guid: 18e1826cf5456b34e9e14b582a8df141,
-    type: 3}
+  _defaultController: {fileID: -1138337455309743373}
   _healthBar: {fileID: 92979992974593119, guid: 18e1826cf5456b34e9e14b582a8df141,
     type: 3}
   OnBeginWalkEvent:
