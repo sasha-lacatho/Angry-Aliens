@@ -7,4 +7,5 @@ public static class LayerUtility
     public static int TerrainMask = 1 << 3;
     public static int ClimbMask = 1 << 6;
     public static int CharacterMask = 1 << 7;
+    public static int TerrainBGMask = 1 << 8;
 }

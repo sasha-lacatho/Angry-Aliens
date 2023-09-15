@@ -7,9 +7,15 @@ public class ShootWeapon : Weapon
     public LineRenderer LineRenderer;
     public override void Attack(Vector3 target, float charge)
     {
+        Debug.LogWarning("Pew Pew");
         base.Attack(target, charge);
 
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, (target - transform.position).normalized, float.PositiveInfinity, LayerUtility.TerrainMask + LayerUtility.CharacterMask);
 
+        foreach (RaycastHit2D hit in hits)
+        {
+            Debug.Log(hit.collider.name);
+        }
     }
 
 
