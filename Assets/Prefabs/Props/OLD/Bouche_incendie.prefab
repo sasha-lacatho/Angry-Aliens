@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2f19714c1e7e385488d31982d77ad0a4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f19714c1e7e385488d31982d77ad0a4,
         type: 3}
@@ -63,11 +63,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2859109400176981367, guid: 2f19714c1e7e385488d31982d77ad0a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0150b7f17a1cd24abd6fe808615094f, type: 2}
     - target: {fileID: 919132149155446097, guid: 2f19714c1e7e385488d31982d77ad0a4,
         type: 3}
       propertyPath: m_Name
-      value: Bouche_incendie Variant
+      value: Bouche_incendie
       objectReference: {fileID: 0}
+    - target: {fileID: 5304280653618066271, guid: 2f19714c1e7e385488d31982d77ad0a4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0150b7f17a1cd24abd6fe808615094f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

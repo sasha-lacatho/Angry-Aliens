@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2289322738441596819}
   - component: {fileID: -895278220113008519}
   m_Layer: 3
-  m_Name: Soucoupe
+  m_Name: soucoupe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3133902808985515014
 MeshFilter:
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 239378781582670930, guid: 02d0799479886cd46bcb75a2cca6f74d, type: 3}
+  - {fileID: 2100000, guid: 6a4a4c8d56ab8f847b8f7c922b26bb3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
