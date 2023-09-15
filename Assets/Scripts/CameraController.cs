@@ -22,10 +22,8 @@ public class CameraController : MonoBehaviour
 
     private IEnumerator ScreenShake()
     {
-        Debug.Log("ScreenShake");
         for(float t = 0; t < 0.5f; t += Time.deltaTime)
         {
-            Debug.Log(t);
             float y = shakeCurve.Evaluate(t * 2.0f);
             offset = new Vector3(0.0f, y, 0.0f);
 

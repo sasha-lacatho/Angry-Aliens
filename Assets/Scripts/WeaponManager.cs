@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
@@ -22,8 +23,17 @@ public class WeaponManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.mouseScrollDelta.y != 0)
+        Vector3 mousePosition = Vector3.zero;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (_mousePlane.Raycast(ray, out float distance))
         {
+            mousePosition = ray.GetPoint(distance);
+        }
+
+
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            Debug.Log(Input.mouseScrollDelta);
             ScrollWeapon(Mathf.RoundToInt(Input.mouseScrollDelta.y));
         }
 
@@ -37,18 +47,12 @@ public class WeaponManager : MonoBehaviour
             _charge = Time.deltaTime * ChargeSpeed;
             _currentWeapon.gameObject.SetActive(true);
         }
-        if(_charge >= 0 )
+        _currentWeapon.Preview(mousePosition, _charge > 0 ? _charge : 0);
+        if (_charge >= 0 )
         {
             _charge = Mathf.Min(_charge + Time.deltaTime * ChargeSpeed, 1);
 
-            Vector3 mousePosition = Vector3.zero;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (_mousePlane.Raycast(ray, out float distance))
-            {
-                mousePosition = ray.GetPoint(distance);
-            }
 
-            _currentWeapon.Preview(mousePosition, _charge);
 
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
@@ -60,10 +64,11 @@ public class WeaponManager : MonoBehaviour
 
     public void ScrollWeapon(int scroll)
     {
-        Destroy(_currentWeapon);
+        Destroy(_currentWeapon.gameObject);
         _currentIndex = Mathf.Max((_currentIndex + scroll) % Weapons.Count, 0);
 
         _currentWeapon = GameObject.Instantiate(Weapons[_currentIndex].gameObject).GetComponent<Weapon>();
+        Debug.Log(_currentWeapon.name);
         _currentWeapon.AttachTo(Character.Current);
     }
 
