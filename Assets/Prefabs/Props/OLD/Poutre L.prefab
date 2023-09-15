@@ -67,11 +67,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 18b7310c85758934b835db48cd90a482, type: 2}
+      objectReference: {fileID: -1910860673104795630, guid: b5cdcf9c62d667144b37d2ad15815b65,
+        type: 3}
+    - target: {fileID: -5754084199372789682, guid: 0d4b167824a383d42a1c26dfe0a3e111,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8195786159844288211, guid: b5cdcf9c62d667144b37d2ad15815b65,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 0d4b167824a383d42a1c26dfe0a3e111,
         type: 3}
       propertyPath: m_Name
-      value: Poutre S
+      value: Poutre L
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d4b167824a383d42a1c26dfe0a3e111,
         type: 3}
