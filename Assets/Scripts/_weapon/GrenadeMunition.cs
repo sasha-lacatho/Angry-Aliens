@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GrenadeMunition : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GrenadeMunition : MonoBehaviour
     public int AttackFrames;
     private int _attackFrames;
     private Weapon _weapon;
+
+    public UnityEvent OnExplodeEvent;
 
     public void Launch(Vector3 force, Weapon weapon)
     {
@@ -51,6 +54,8 @@ public class GrenadeMunition : MonoBehaviour
     {
         Debug.Log("Explode");
         _exploded = true;
+
+        OnExplodeEvent.Invoke();
 
         HitCollider.OnTrigger = OnHit;
         HitCollider.Collider.enabled = true;

@@ -23,5 +23,7 @@ public abstract class Weapon : MonoBehaviour
     {
         _target = target;
         Charge = charge;
+
+        OnAttack.Invoke();
     }
 }
