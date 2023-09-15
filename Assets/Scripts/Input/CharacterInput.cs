@@ -18,7 +18,7 @@ public class CharacterInput : MonoBehaviour
     }
     private bool TryGetController(out CharacterMovement controller)
     {
-        controller = Character.Current.GetController();
+        controller = Character.Current?.GetController();
         return controller != null;
     }
 }
