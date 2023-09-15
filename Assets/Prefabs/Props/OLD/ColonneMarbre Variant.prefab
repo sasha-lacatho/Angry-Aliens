@@ -189,5 +189,5 @@ MonoBehaviour:
   _health: 100
   _minimumImpact: 5
   _impactDamageReceived: 1
-  IgnoreGravity: 1
-  GravityWhenHit: 1
+  IgnoreGravity: 0
+  GravityWhenHit: 0
