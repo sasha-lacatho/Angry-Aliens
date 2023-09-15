@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2289322738441596819}
   - component: {fileID: -895278220113008519}
   m_Layer: 3
-  m_Name: Soucoupe
+  m_Name: BoucheIncendie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3133902808985515014
 MeshFilter:
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944709032810996450}
-  m_Mesh: {fileID: 96905659934551938, guid: 7b645d632e2003c438a0cdaf71e5937b, type: 3}
+  m_Mesh: {fileID: 3909233067320746374, guid: 2f19714c1e7e385488d31982d77ad0a4, type: 3}
 --- !u!23 &-1247796123315697465
 MeshRenderer:
   m_ObjectHideFlags: 0
